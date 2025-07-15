@@ -3,9 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testing Repository Page</title>
+    <title>Box Model in CSS</title>
+    <style>
+        /* 
+            The CSS Box Model consists of:
+            - Content: The actual text, image, etc.
+            - Padding: Space between content and border
+            - Border: The outline around the padding
+            - Margin: Space outside the border, separating from other elements
+
+            Remember: 
+            Content -> Padding -> Border -> Margin (from inside out)
+            "CPBM" can help you recall the order.
+        */
+        .box{
+            background-color: lightseagreen;
+        }
+        .box1 {
+            /* 
+                width & height: Size of the content area
+                padding: Space inside the border, around content
+                border: The border around the padding
+                margin: Space outside the border
+                By default, width/height does NOT include padding/border!
+            */
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            padding: 10px;
+            border: 5px solid black;
+        }
+        .box2 {
+            /* 
+                box-sizing: border-box makes width/height include padding & border.
+                This is easier to manage layouts!
+                By default, box-sizing is 'content-box', so width/height only applies to the content area.
+                With 'border-box', width/height includes content + padding + border.
+                This means the total size of the element is exactly what you set!
+                Example:
+                width: 200px;
+                padding: 10px;
+                border: 5px;
+                - With content-box: total width = 200 + 10*2 + 5*2 = 230px
+                - With border-box: total width = 200px (includes everything)
+            */
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            padding: 10px;
+            border: 5px solid black;
+            box-sizing: border-box; /* Includes padding & border in width/height */
+        }
+    </style>
 </head>
 <body>
-    <h1>I make this simple web page with one heading to checker whether my changes are reflected in the repository.</h1>
+    <!-- 
+        .box1 uses default box model: width/height is only for content.
+        Actual size = content + padding + border.
+        (box-sizing: content-box, which is default)
+    -->
+    <div class="box box1"></div>
+    <!-- 
+        .box2 uses border-box: width/height includes padding & border.
+        Actual size = exactly 200x200px.
+        (box-sizing: border-box)
+        This is usually preferred for layouts!
+    -->
+    <div class="box box2"></div>
+    <!-- 
+        Tip to remember: 
+        "Margin is OUTSIDE, Padding is INSIDE, Border is in-between."
+        Visualize as layers: Margin > Border > Padding > Content
+    -->
 </body>
 </html>
