@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors in CSS
+    </title>
+    <style >
+        /* Universal selector: applies to all elements */
+        * {
+            margin: auto;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Class selector: targets elements with class="example" */
+        .example {
+            color: blue;
+        }
+
+        /* ID selector: targets element with id="example2" */
+        #example2 {
+            color: green;
+        }
+
+        /* Child selector: targets <p> that are direct children of <div> */
+        div > p {
+            color: red;
+        }
+
+        /* Type selector: targets all <p> elements */
+        p {
+            color: rgb(230, 13, 208);
+        }
+
+        /* Descendant selector: targets <span> inside <div> */
+        div span {
+            background: #e0f7fa;
+        }
+
+        /* Attribute selector: targets <a> with href attribute */
+        a[href] {
+            font-weight: bold;
+        }
+
+        /* Pseudo-class selector: hover state for <a> */
+        a:hover {
+            color: orange;
+        }
+
+        /* Pseudo-class selector: visited state for <a> */
+        a:visited {
+            color: purple;
+        }
+
+        /* Pseudo-class selector: active state for <a> */
+        a:active {
+            color: yellow;
+        }
+
+        /* Group selector: targets both <div> and <span> */
+        div, span {
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        /* Adjacent sibling selector: targets <p> immediately after <span> */
+        span + p {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.google.com">Google</a>
+    <div class="example">
+        This is an CSS Selectors Code!
+    </div>
+    <div id="example2">
+        This is another CSS Selectors Code!
+    </div>
+    <div>
+        <span>
+            <p> My name is Muhammad Awais Altaf</p>
+        </span>
+        <p> I am a Web Developer</p>
+        Hi there, I am learning CSS Selectors.
+    </div>
+</body>
+</html>
