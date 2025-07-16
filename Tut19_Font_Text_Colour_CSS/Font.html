@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Properties in CSS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <style>
+        /* ===========================
+           FONT & TEXT PROPERTIES NOTES
+           ===========================
+           Use these as a reference for styling text in CSS.
+        */
+
+        /* Headings: Basic font properties */
+        h1 {
+            font-family: 'Manufacturing Consent', sans-serif;      /* Type of font */
+            font-size: 24px;                     /* Size of text */
+            font-weight: bold;                   /* Thickness: normal, bold, 100-900 */
+            font-style: normal;                  /* normal, italic, oblique */
+            font-variant: small-caps;            /* normal, small-caps */
+            color: #222;                         /* Text color */
+            letter-spacing: 1px;                 /* Space between letters */
+            text-align: left;                    /* left, right, center, justify */
+            margin-bottom: 10px;
+        }
+
+        /* Paragraphs: Basic font properties */
+        p {
+            font-family: 'Times New Roman', serif;
+            font-size: 16px;
+            font-weight: normal;
+            font-style: italic;
+            font-variant: normal;
+            color: #444;
+            line-height: 1.5;                    /* Space between lines */
+            text-align: justify;
+            margin-bottom: 8px;
+        }
+
+        /* Class: Lorem - Demonstrates various text properties */
+        .Lorem {
+            /* Font properties */
+            font-family: "Winky Rough", sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            font-style: italic;
+            font-variant: normal;
+            color: blue;
+
+            /* Text properties */
+            line-height: normal;                 /* Line height */
+            letter-spacing: 2px;                 /* Space between letters */
+            word-spacing: 5px;                   /* Space between words */
+            text-align: center;                  /* Center text */
+            text-decoration: underline;          /* underline, overline, line-through, none */
+            text-transform: uppercase;           /* uppercase, lowercase, capitalize */
+            text-indent: 20px;                   /* Indent first line */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Shadow effect */
+            white-space: pre-wrap;               /* How whitespace is handled */
+            overflow-wrap: break-word;           /* Break long words */
+            direction: ltr;                      /* Text direction: ltr, rtl */
+            text-overflow: ellipsis;             /* Show ... for overflowed text */
+        }
+
+        /* Class: New - Another example with different properties */
+        .New {
+            font-family: "Courier New", monospace;
+            font-size: 20px;
+            font-weight: bold;
+            font-style: normal;
+            font-variant: small-caps;
+            color: green;
+
+            line-height: 1.2;
+            letter-spacing: 1px;
+            word-spacing: 2px;
+            text-align: left;
+            text-decoration: none;
+            text-transform: lowercase;
+            text-indent: 10px;
+            text-shadow: none;
+            white-space: nowrap;                 /* Prevent line breaks */
+            overflow-wrap: normal;
+            direction: ltr;
+            text-overflow: clip;                 /* Clip overflowed text */
+        }
+
+        /* Example: Shorthand font property (sets style, weight, size, family at once) */
+        .shorthand-example {
+            font: italic small-caps bold 18px/1.5 Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Some Font Properties in CSS</h1>
+        <p>font-family</p>
+        <p>font-size</p>
+        <p class="New">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum tempora, dolores cum est possimus corporis. Rem repellat nemo provident debitis, aperiam eaque culpa corporis veritatis nostrum fugiat? Ipsa similique, ea perferendis laboriosam nemo ullam facere! Repellat ad odit iusto non.</p>
+        <p class="Lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aut fugiat expedita distinctio,
+            voluptates
+            adipisci eveniet qui voluptatem sapiente quos vero, saepe numquam pariatur, aliquam dolorum deserunt!
+            Reiciendis eaque saepe quo deserunt adipisci fugiat ad error ducimus magnam, facilis eos minima magni in
+            itaque accusantium!</p>
+
+        <h1>Some Text Properties</h1>
+        <!-- 
+            FONT PROPERTIES CHEAT SHEET:
+            - font-family: Font type
+            - font-size: Size of text
+            - font-weight: Thickness (normal, bold, 100-900)
+            - font-style: normal, italic, oblique
+            - font-variant: normal, small-caps
+            - line-height: Space between lines
+            - color: Text color
+
+            TEXT PROPERTIES CHEAT SHEET:
+            - text-align: left, right, center, justify
+            - text-decoration: underline, overline, line-through, none
+            - text-transform: uppercase, lowercase, capitalize
+            - letter-spacing: Space between letters
+            - word-spacing: Space between words
+            - text-indent: Indent first line
+            - text-shadow: Shadow effect
+            - white-space: How whitespace is handled
+            - overflow-wrap: Break long words
+            - text-overflow: How to handle overflowed text (ellipsis, clip)
+            - direction: ltr, rtl
+        -->
+    </div>
+</body>
+
+</html>

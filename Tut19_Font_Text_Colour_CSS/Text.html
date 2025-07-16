@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Properties in CSS</title>
+    <style>
+        h1{
+            text-decoration: underline;              /* Underline the text */
+            text-decoration-color: #2701ff;          /* Color of the underline */
+            text-decoration-style: dotted;           /* Style of the underline */
+            text-decoration-thickness: 2px;          /* Thickness of the underline */
+            text-decoration-line: underline;         /* Line type: underline, overline, etc. */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);/* Shadow behind text */
+            text-indent: 20px;                       /* Indent first line */
+            text-transform: uppercase;               /* Uppercase all letters */
+            color: #e30505;                          /* Text color */
+            letter-spacing: 2px;                     /* Space between letters */
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            font-style: italic;
+            font-variant: small-caps;
+            text-align: center;
+            line-height: 1.5;
+            /* Added properties */
+            word-spacing: 4px;                       /* Space between words */
+            white-space: normal;                     /* How whitespace is handled */
+            direction: ltr;                          /* Text direction: ltr or rtl */
+            unicode-bidi: normal;                    /* For complex scripts */
+        }
+        .Lorem{
+            border: 2px solid #1c0808;
+            width: 450px;
+            text-overflow: ellipsis;                 /* Show ... for overflowed text */
+            overflow: hidden;                        /* Hide overflowed content */
+            word-break: break-all;                   /* Break long words */
+            text-align: justify;                     /* Justify text */
+            /* Added properties */
+            text-transform: capitalize;              /* Capitalize first letter of each word */
+            text-decoration: line-through;           /* Line through text */
+            letter-spacing: 1px;
+            word-spacing: 2px;
+            white-space: pre-line;                   /* Preserve whitespace and line breaks */
+            line-height: 1.6;
+            direction: ltr;
+            unicode-bidi: embed;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1> Some Text Properties in CSS</h1>
+        <p class="Lorem">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate placeat at officiis, animi ex libero dignissimos commodi, inventore ab magnam laborum minus reprehenderit obcaecati modi. Provident necessitatibus quidem dolor quisquam!</p>
+        <p>
+        </p>
+    </div>
+</body>
+</html>

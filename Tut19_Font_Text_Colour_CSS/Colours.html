@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colours Properties in CSS</title>
+    <style>
+        /* ===========================
+           COLOUR PROPERTIES IN CSS
+           ===========================
+           Use these as a reference for color styling in CSS.
+        */
+
+        /* Text color examples */
+        .color-keyword {
+            color: teal;
+            /* Colour keyword */
+        }
+
+        .color-hex {
+            color: #ff5733;
+            /* Hexadecimal notation */
+        }
+
+        .color-rgb {
+            color: rgb(255, 87, 51);
+            /* RGB notation */
+        }
+
+        .color-rgba {
+            color: rgba(255, 87, 51, 0.5);
+            /* RGBA notation (with alpha) */
+        }
+
+        .color-hsl {
+            color: hsl(9, 100%, 60%);
+            /* HSL notation */
+        }
+
+        .color-hsla {
+            color: hsla(9, 100%, 60%, 0.5);
+            /* HSLA notation (with alpha) */
+        }
+
+        /* Background color examples */
+        .bg-keyword {
+            background-color: lightblue;
+        }
+
+        .bg-hex {
+            background-color: #2222ff;
+        }
+
+        .bg-rgb {
+            background-color: rgb(34, 34, 255);
+        }
+
+        .bg-rgba {
+            background-color: rgba(34, 34, 255, 0.3);
+        }
+
+        .bg-hsl {
+            background-color: hsl(240, 100%, 60%);
+        }
+
+        .bg-hsla {
+            background-color: hsla(240, 100%, 60%, 0.3);
+        }
+
+        /* Border color example */
+        .border-color {
+            border: 2px solid #e30505;
+            /* Border color */
+        }
+
+        /* Outline color example */
+        .outline-color {
+            outline: 2px dashed green;
+            /* Outline color */
+        }
+
+        /* Text selection color */
+        ::selection {
+            background: yellow;
+            color: black;
+        }
+
+        /* Opacity property (affects whole element) */
+        .opacity-example {
+            background-color: orange;
+            opacity: 0.5;
+            /* 0 (transparent) to 1 (opaque) */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Some Colour Properties</h1>
+    <p>
+        Colour can be represented in various formats:
+    <ul>
+        <li>Colour Keywords</li>
+        <li>Hexadecimal Notation</li>
+        <li>RGB Notation</li>
+        <li>RGBA Notation</li>
+        <li>HSL Notation</li>
+        <li>HSLA Notation</li>
+    </ul>
+    <div>
+        <p class="color-keyword">This uses a colour keyword.</p>
+        <p class="color-hex">This uses hexadecimal notation.</p>
+        <p class="color-rgb">This uses RGB notation.</p>
+        <p class="color-rgba">This uses RGBA notation (with transparency).</p>
+        <p class="color-hsl">This uses HSL notation.</p>
+        <p class="color-hsla">This uses HSLA notation (with transparency).</p>
+        <p class="bg-keyword">This has a background colour keyword.</p>
+        <p class="bg-hex">This has a hexadecimal background colour.</p>
+        <p class="bg-rgb">This has an RGB background colour.</p>
+        <p class="bg-rgba">This has an RGBA background colour (with transparency).</p>
+        <p class="bg-hsl">This has an HSL background colour.</p>
+        <p class="bg-hsla">This has an HSLA background colour (with transparency).</p>
+        <p class="border-color">This has a coloured border.</p>
+        <p class="outline-color">This has a coloured outline.</p>
+        <p class="opacity-example">This uses the opacity property (semi-transparent).</p>
+    </div>
+    <!-- 
+        Colour Properties Cheat Sheet:
+        - color: Text color
+        - background-color: Background color
+        - border-color: Border color
+        - outline-color: Outline color
+        - opacity: Transparency of the whole element
+        - ::selection: Color when text is selected
+        - Supported formats: keyword, hex, rgb, rgba, hsl, hsla
+    -->
+</body>
+
+</html>
