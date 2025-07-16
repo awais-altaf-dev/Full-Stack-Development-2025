@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise2 on CSS</title>
+    <style>
+        p:first-child {
+            color: red;
+            background-color: rgb(238, 255, 0);
+          
+        }
+    div > p {
+            color: blue;
+            background-color: rgb(231, 231, 220);
+        }
+        div:nth-of-type(2) > p:first-child {
+            color: yellow;
+            background-color: blue;
+        }
+        div:nth-of-type(2) >p{
+            color: white;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A totam aspernatur pariatur. Nihil, optio! Sunt molestiae nobis nisi repellendus repudiandae!</p>
+        <p>I am 2nd Paragraph</p>
+        <p>I am 3rd Paragraph</p>
+        </p>
+    </div>
+    <div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus molestiae velit laborum molestias debitis doloribus unde veritatis consequatur, hic totam?</p>
+        <p>I am 2nd Paragraph of 2nd div</p>
+        <p>I am 3rd Paragraph of 2nd div</p>
+    </div>
+</body>
+</html>
