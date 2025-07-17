@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Sizing in CSS</title>
+    <!-- CSS Sizing Units - px, rem, em, vh, vw, % & more -->
+</head>
+
+<style>
+    /* ==============================
+       CSS Sizing Units Reference
+       ==============================
+       px  = Pixels (fixed size)
+       %   = Percentage (relative to parent)
+       em  = Relative to parent font-size
+       rem = Relative to root (html) font-size
+       vw  = Viewport width (1vw = 1% of viewport width)
+       vh  = Viewport height (1vh = 1% of viewport height)
+       min/max-height/width = Set minimum/maximum size
+    */
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    html{
+        font-size: 16px; /* Base font size for rem units */
+    }
+
+    .container{
+        box-sizing: border-box;
+        border: 2px solid black;
+        width: 80vw;              /* 80% of viewport width */
+        margin: auto;
+        background-color: lightgreen;
+    }
+    .container2{
+        box-sizing: border-box;
+        border: 2px solid black;
+        width: 80vw;              /* 80% of viewport width */
+        /* height: 200vh;         Example: 200% of viewport height */
+        min-height: 150vh;        /* Minimum height: 150% of viewport height */
+        margin: 23px auto;
+        font-size: 16px;          /* Font size for em units inside */
+        background-color: lightblue;
+    }
+    .container p{
+        /* font-size: 2em;        2x parent font size */
+        font-size: 2rem;          /* 2x root font size (html) */
+        width: 50%;               /* 50% of parent width */
+        border: 2px solid black;
+        margin: auto;
+    } 
+    h1{
+        font-size: 3rem;          /* 3x root font size */
+        text-align: center;
+        margin: 20px 0;
+    }
+    .container3{
+        box-sizing: border-box;
+        border: 2px solid black;
+        width: 80vw;              /* 80% of viewport width */
+        min-height: 10vh;         /* Minimum height: 10% of viewport height */
+        margin: 23px auto;
+        background-color: lightcoral;
+    }
+</style>
+<body>
+    <div class="container">
+        <p>CSS offers a variety of units for sizing elements, each with its own use cases and behaviors.</p>
+    </div>
+    <div class="container2">
+        <h1>CSS Sizing Units</h1>
+        <p>
+         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde rem, numquam optio similique corporis libero quam nobis natus reiciendis repudiandae quas consectetur. Quo accusantium molestias libero! Exercitationem doloremque soluta libero corrupti dicta, quaerat at quisquam provident quasi veniam molestias modi architecto officia? Cupiditate amet quis doloribus assumenda adipisci maiores blanditiis possimus dicta veritatis dolor officia, fugiat aliquam ab dolores dolorum laudantium reiciendis quae et ex temporibus obcaecati! Quisquam nam facere consequatur, unde quos molestiae ipsam odio et fuga, atque pariatur magnam aspernatur est assumenda delectus vero tempora deleniti dolor, quas qui! Necessitatibus quos labore, distinctio a perspiciatis totam. Optio, excepturi natus. Accusamus dicta natus autem, nisi unde quod? Maiores, dolore corporis. Libero iste doloribus, reprehenderit assumenda ipsam rerum repellat voluptatibus nihil ab in accusantium dicta quis iusto necessitatibus deleniti eum laborum repudiandae error consequatur. Esse quam at modi rem nisi, sunt incidunt similique dolores nostrum natus perferendis ea animi earum, accusamus dicta exercitationem ut quidem repellat? Perspiciatis iure, mollitia illum illo aut animi nihil? Voluptatem facilis alias iusto delectus qui error exercitationem, quia magni? Provident, aperiam. Placeat deleniti obcaecati voluptates error, animi neque impedit dolor fuga fugiat. Cupiditate praesentium quasi beatae nihil. Ratione, minus? Ipsam, iure. Perferendis praesentium quo ratione eligendi perspiciatis dignissimos maxime, esse sunt dicta vitae cumque assumenda omnis, magnam, unde placeat. Quod assumenda, dolore dolor voluptatum quis veniam magnam officiis repellendus adipisci quaerat pariatur expedita ut officia, tenetur ipsa impedit quo rem! Dicta omnis soluta beatae nemo totam quas iusto eaque sed, quo eveniet animi est, iste neque corporis doloribus vel? Consequuntur saepe excepturi et fugit deserunt ipsum dolore, assumenda rem inventore voluptates, placeat necessitatibus a voluptatum aperiam mollitia sint earum quis pariatur neque iusto nam ducimus officiis perspiciatis quasi! Laboriosam animi accusamus inventore error adipisci repellendus non reiciendis doloribus unde. Corporis, blanditiis quos. Rerum, maiores dolore.
+        </p>
+    </div>
+    <div class="container3" >
+        <p>
+            SO this is a test of the container3 class. It should have a minimum height of 10% of the viewport height (10vh), which means it will always be at least 10vh tall, even if the content is less than that.
+        </p>
+    </div>
+</body>
+</html>
