@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity in CSS</title>
+
+    <!-- Specificity Calculation:
+    Specificity is calculated based on the following rules:
+
+    Inline styles have the highest specificity (1000).
+    IDs have a specificity of 100.
+    Classes, attributes, and pseudo-classes have a specificity of 10.
+    Elements and pseudo-elements have a specificity of 1.
+    Universal selectors have a specificity of 0. -->
+
+    <style>
+        h1 {
+            /*The Specificity of Of this selector is 1 */
+            color: blue;
+        }
+
+        .first {
+            /* The Specificity of this selector is 10 */
+            color: red;
+        }
+
+        .second {
+            /* The Specificity of this selector is 10 */
+            color: green;
+        }
+
+        .third {
+            /* The Specificity of this selector is 10 */
+            color: purple;
+        }
+
+        [data-x] {
+            /* The Specificity of this selector is 100 */
+            color: rgb(2, 255, 255);
+        }
+
+        h1.first.second.third[data-x] {
+            /* The Specificity of this selector is 111 */
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 class="first second third" data-x="y">Understand Specificity in CSS</h1>
+    </div>
+
+</body>
+
+</html>
