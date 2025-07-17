@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Shadows and Outlines</title>
+    <style>
+        .box:first-of-type > p {
+            border-radius: 20px; /* Only first box: rounded corners */
+        }
+        .box>p{
+            border: 2px solid black; /* Box border */
+            box-shadow: 5px 5px 10px rgba(205, 8, 8, 0.5); /* Box shadow: offset-x, offset-y, blur, color */
+            /* border-radius: 20px; */ /* Use only if you want all boxes rounded */
+            padding: 10px; /* Space inside border */
+            margin: 20px;  /* Space outside box */
+            text-align: center; /* Center text */
+            text-shadow: 2px 2px 4px rgba(140, 160, 25, 0.5); /* Text shadow: offset-x, offset-y, blur, color */
+        }
+        .box:nth-of-type(2)>p{
+            border: 2px solid black; /* Second box border */
+            box-shadow: 5px 5px 10px rgba(8, 205, 8, 0.5); /* Greenish shadow for second box */
+            padding: 10px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(25, 140, 160, 0.5); /* Blueish text shadow for second box */
+            outline-offset: 5px; /* Space between border and outline */
+        }
+        h1 {
+            text-align: center; /* Center heading */
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>CSS Shadows and Outlines</h1>
+        <p>This box has a shadow and an outline.</p>
+    </div>
+    <div class="box">
+        <p>
+            This is another paragraph with a shadow and an outline.
+            <br>
+            Shadows can be used to create depth and emphasis on elements.
+        </p>
+    </div>
+    <!-- 
+        CSS Shadows & Outlines Cheat Sheet:
+        - box-shadow: Adds shadow to boxes (offset-x, offset-y, blur, color)
+        - text-shadow: Adds shadow to text (offset-x, offset-y, blur, color)
+        - border-radius: Rounds box corners
+        - outline-offset: Space between border and outline
+        - Use shadows for depth, outlines for emphasis, and border-radius for smooth corners!
+    -->
+</body>
+</html>
