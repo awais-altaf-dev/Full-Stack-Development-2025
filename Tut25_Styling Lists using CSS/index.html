@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,25 +14,36 @@
            - list-style: none removes default bullets
         */
         nav ul {
-            display: flex;          /* Makes list items horizontal */
-            gap: 20px;              /* Space between items */
-            list-style: none;       /* Removes default bullets */
+            display: flex;
+            /* Makes list items horizontal */
+            gap: 20px;
+            /* Space between items */
+            list-style: none;
+            /* Removes default bullets */
             padding: 0;
-            margin: 20px 0;         /* Top and bottom margin for nav */
+            margin: 20px 0;
+            /* Top and bottom margin for nav */
         }
+
         nav ul li {
-            padding: 20px;          /* Padding inside each item */
-            margin: 0;              /* No extra margin needed */
-            list-style-type: none;  /* Ensures no default marker */
+            padding: 20px;
+            /* Padding inside each item */
+            margin: 0;
+            /* No extra margin needed */
+            list-style-type: none;
+            /* Ensures no default marker */
             /* list-style: devanagari;   Example: custom list style */
             /* list-style-image: url('https://www.dezven.com/project/how-to-design-portfolio-website-using-html-css-and-bootstrap/images/portfolio.png'); */
         }
+
         /* Example: Add emoji as marker using ::marker */
         nav ul li::marker {
-            content: "⭐ ";          /* Emoji marker for each item */
+            content: "⭐ ";
+            /* Emoji marker for each item */
         }
     </style>
 </head>
+
 <body>
     <nav>
         <ul>
@@ -42,4 +54,5 @@
         </ul>
     </nav>
 </body>
+
 </html>
