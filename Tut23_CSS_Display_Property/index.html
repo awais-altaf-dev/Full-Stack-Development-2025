@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Properties</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            box-sizing: border-box;
+            border: 2px solid black;
+            display: inline-block;    /* inline-block: inline + block features */
+            /* display: block;        Block-level, starts on new line */
+            /* display: inline;       Inline, no width/height, flows with text */
+            /* display: flex;         Flexbox container */
+            /* display: grid;         Grid container */
+            /* display: none;         Removes element from layout */
+            width: 344px;
+            padding: 45px;
+            margin: 34px;
+        }
+        .box1{
+            /* display: none;         Hide element, removes from layout */
+            /* visibility: hidden;    Hide element, keeps space in layout */
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">
+        this is a box 1
+    </div>
+    <div class="box">
+        this is box 2
+    </div>
+    <!-- 
+        CSS Display Property Cheat Sheet:
+        - block: Starts on new line, fills width
+        - inline: Flows with text, no width/height
+        - inline-block: Inline + block features
+        - flex: Flexbox layout
+        - grid: Grid layout
+        - none: Removes element from layout
+        - visibility: hidden (hides but keeps space)
+    -->
+</body>
+</html>
