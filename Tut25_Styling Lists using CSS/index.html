@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Lists using CSS</title>
+    <style>
+        /* ==============================
+           NAVIGATION LIST STYLING (HORIZONTAL)
+           ==============================
+           - display: flex makes list horizontal
+           - gap adds space between items
+           - list-style: none removes default bullets
+        */
+        nav ul {
+            display: flex;          /* Makes list items horizontal */
+            gap: 20px;              /* Space between items */
+            list-style: none;       /* Removes default bullets */
+            padding: 0;
+            margin: 20px 0;         /* Top and bottom margin for nav */
+        }
+        nav ul li {
+            padding: 20px;          /* Padding inside each item */
+            margin: 0;              /* No extra margin needed */
+            list-style-type: none;  /* Ensures no default marker */
+            /* list-style: devanagari;   Example: custom list style */
+            /* list-style-image: url('https://www.dezven.com/project/how-to-design-portfolio-website-using-html-css-and-bootstrap/images/portfolio.png'); */
+        }
+        /* Example: Add emoji as marker using ::marker */
+        nav ul li::marker {
+            content: "⭐ ";          /* Emoji marker for each item */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+</body>
+</html>
