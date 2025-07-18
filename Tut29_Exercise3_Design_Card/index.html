@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design the card</title>
+    <style>
+        body {
+            background-color: #eaf0f3;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .Card {
+            width: 400px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0 32px 32px 32px;
+            margin: 20px;
+        }
+        .card-img {
+            width: 90%;                /* Slightly smaller than card width for spacing */
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;       /* Rounded corners: 10px on all sides */
+            margin: 16px auto 24px auto; /* Top/bottom margin, auto left/right centers image */
+            display: block;            /* Makes margin: auto work for centering */
+        }
+        .tags {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+        .tag {
+            background-color: #eaf0f3;
+            color: #4a6fa5;
+            border-radius: 20px;
+            padding: 6px 18px;
+            font-size: 15px;
+            font-family: inherit;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        .card-title {
+            font-size: 2rem;
+            color: #333;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+        .card-desc {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 28px;
+            line-height: 1.6;
+        }
+        .card-btn {
+            background-color: #dbeafe;
+            color: #2563eb;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 28px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-family: inherit;
+            /* transition: background 0.2s; */
+        }
+        .card-btn:hover {
+            background-color: #b6d3fc;
+        }
+    </style>
+</head>
+<body>
+    <div class="Card">
+        <img class="card-img" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Lago di Braies">
+        <div class="tags">
+            <span class="tag">Nature</span>
+            <span class="tag">Lake</span>
+        </div>
+        <div class="card-title">Nature Card</div>
+        <div class="card-desc">
+             Hi I am Muhammad Awais Altaf and this is my first card design. I have used HTML and CSS to design this card.
+        </div>
+        <button class="card-btn">Read More</button>
+    </div>
+</body>
+</html>
