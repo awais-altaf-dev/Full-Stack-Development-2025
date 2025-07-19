@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Queries</title>
+    <style>
+        body{
+            
+            background-color: burlywood
+        }
+        @media only screen and (max-width: 455px) {
+            body {
+                background-color: lightblue;
+            }
+            
+        }
+        .boxes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .box{
+            border: 2px solid black;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Welcome to CSS Media Queries Tutorial</h1>
+        <p>This page demonstrates the use of CSS media queries to adapt the layout based on the screen size.</p>
+    </div>
+    <div class="boxes">
+        <div class="box" style="background-color: lightcoral; width: 100px; height: 100px; margin: 10px; display: inline-block;"></div>
+        <div class="box" style="background-color: lightgreen; width: 100px; height: 100px; margin: 10px; display: inline-block;"></div>
+        <div class="box" style="background-color: lightgoldenrodyellow; width: 100px; height: 100px; margin: 10px; display: inline-block;"></div>
+        
+    </div>
+</body>
+</html>
