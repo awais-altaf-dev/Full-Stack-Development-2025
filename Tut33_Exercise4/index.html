@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar using CSS Variables</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+:root{
+    --primary-color: #83e41b;
+    --secondary-color: #098cac;   
+    --font-family: 'Arial', sans-serif;
+    --boxes-colour: black 2px solid;
+}
+body{
+    font-family: var(--font-family);
+    background-color: var(--secondary-color);
+}
+.nav{
+    background-color: var(--primary-color);
+    padding: 10px;
+    
+    
+}
+.nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+.nav li{
+    padding: 3px;
+    border: var(--boxes-colour) ;
+    border-radius: 5px;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+           <li>Home</li>
+              <li>About</li>
+              <li>Services</li>
+                <li>Contact</li>
+                <li>Blog</li>
+        </ul>
+    </div>
+</body>
+</html>
