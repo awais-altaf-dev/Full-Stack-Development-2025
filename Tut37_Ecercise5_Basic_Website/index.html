@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Design the Layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #e3dede;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navbar */
+    ul {
+      display: flex;
+      background-color: rgb(5, 243, 255);
+      justify-content: space-around;
+      padding: 10px 0;
+      list-style: none;
+    }
+
+    
+
+    li {
+      padding: 8px 15px;
+      border: 1px solid black;
+      border-radius: 7px;
+      background-color: white;
+      /* cursor: pointer; */
+    }
+
+    /* Box Container */
+    .boxes {
+      background-color: rgb(38, 232, 38);
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      padding: 40px 0;
+    }
+
+    .box,
+    .box2 {
+      width: 150px;
+      height: 150px;
+    }
+
+    .box {
+      background-color: pink;
+    }
+
+    .box2 {
+      background-color: dodgerblue;
+    }
+
+    /* Circle Register Logo */
+    .circle-logo {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: orange;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      right: 29px;
+      top: 290px;
+      font-weight: bold;
+      color: white;
+    }
+
+    /* Main Footer */
+    footer.main-footer {
+      background-color: #000;
+      color: rgb(231, 216, 216);
+      padding: 20px;
+      text-align: center;
+      margin-top: 20px;
+      border-radius: 15px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1.2em;
+    }
+
+    /* Red Footer */
+    footer.red-footer {
+      background-color: red;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      width: 80%;
+      margin:60px auto;
+      border-radius: 10px;
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+  <div class="website">
+    <header>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </header>
+  </div>
+
+  <div class="boxes">
+    <div class="box"></div>
+    <div class="box2"></div>
+  </div>
+
+  <!-- Circle Register Symbol -->
+  <div class="circle-logo">Ⓡ</div>
+
+  <!-- Black Footer -->
+  <footer class="main-footer">
+    Welcome to this Sigma Web Development Express
+  </footer>
+
+  <!-- Red Footer -->
+  <footer class="red-footer">
+    © 2025 Sigma Web Express - All rights reserved
+  </footer>
+</body>
+</html>
