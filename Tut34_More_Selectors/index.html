@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More About Selectors</title>
+    <style>
+        /* .box:first-child {
+            background-color: lightblue;
+        }
+        .box::first-letter {
+            font-size: 2em;
+            color: red;
+        } */
+         /* .box:first-child::first-line {
+            font-weight: bold;
+            color: green;
+         } */
+        /* .boxes *{
+            background-color: lightgray;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid black;
+            color: rgb(43, 0, 255);
+
+        } */
+         /* [data-primary="true"] {
+            background-color: lightblue;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid black;
+            color: rgb(43, 0, 255);
+         }
+          */
+          /* .box:nth-child(even) {
+            background-color: lightblue;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid black;
+            color: rgb(43, 0, 255);
+
+
+          } */
+           /* .box:nth-last-child(1) {
+            background-color: lightblue;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid black;
+            color: rgb(43, 0, 255);
+           }
+           .boxes::after{
+            content: "After Content";
+            color: red;
+           }
+           .boxes::before {
+            content: "Boxes Content";
+            color: green;
+           } */
+
+           ::selection {
+            background-color: yellow;
+            color: rgb(6, 69, 37);
+
+           }
+           input::placeholder {
+            color: red;
+            font-weight: bold;
+           }
+    
+
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div data-primary="true">Hi I am Muhammad Awais Altaf</div>
+        <div class="box">Hi I am Muhammad Awais Altaf</div>
+        <div class="box">Hi I am Muhammad Awais Altaf</div>
+        <div class="box">Hi I am Muhammad Awais Altaf</div>
+        <input type="text" placeholder="Type something here...">
+    </div>
+</body>
+</html>
