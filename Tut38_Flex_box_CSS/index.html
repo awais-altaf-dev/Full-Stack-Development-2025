@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex BOX in CSS</title>
+    <style>
+        .container {
+            height: 80vh;
+            border: 2px solid red;
+            display: flex;
+            justify-content: center;
+            /* align-items:end; */
+            /* align-items:start; */
+
+            /* flex-direction: column;
+          flex-wrap: wrap; */
+            align-content: center;
+            /* display: flex; → Already set, this activates Flexbox */
+
+            /* flex-direction: row-reverse; → Reverses item order horizontally */
+            /* flex-direction: column-reverse; → Reverses item order vertically */
+
+            /* flex-wrap: nowrap; → Prevents items from wrapping (default) */
+            /* flex-wrap: wrap-reverse; → Wraps items but in reverse order */
+
+            /* justify-content: space-between; → Equal spacing between items, none on ends */
+            /* justify-content: space-around; → Equal space around every item */
+            /* justify-content: space-evenly; → Equal space between and around items */
+
+            /* align-items: center; → Centers items vertically in the container */
+            /* align-items: stretch; → Stretches items to fill the container's cross-axis */
+
+            /* align-content: space-between; → Used when items wrap to control spacing between lines */
+            /* gap: 10px; → Creates consistent spacing between flex items */
+
+            /* row-gap: 10px; column-gap: 10px; → More granular control over spacing */
+
+            /* place-content: center; → Combines align-content + justify-content for shorthand */
+            /* place-items: center; → Combines align-items + justify-items (mainly for grid) */
+        }
+
+
+
+        .box {
+            border: 2px solid black;
+            margin: 10px;
+            height: 62px;
+            width: 62px;
+            background-color: aqua;
+            border-radius: 5px;
+            /* flex-grow: 1; → Item grows to fill available space */
+            /* flex-shrink: 1; → Item shrinks if necessary (default is 1) */
+            /* flex-basis: 100px; → Sets the initial main size before growing/shrinking */
+
+            /* flex: 1 1 100px; → Shorthand for grow, shrink, and basis */
+
+            /* align-self: flex-end; → Overrides align-items for one item */
+            /* order: 2; → Controls item order (default is 0) */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+</body>
+
+</html>
