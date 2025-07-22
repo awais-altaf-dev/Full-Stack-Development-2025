@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Nav bar using Flexbox</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center; /* Align items vertically */
+            background-color: #333;
+            padding: 1rem;
+        }
+
+        nav div {
+            color: white;
+            text-align: center;
+        }
+
+        nav div:hover {
+            background-color: #575757;
+        }
+
+        nav img {
+            height: 40px; /* Adjust the height of the logo */
+            width: auto; /* Maintain aspect ratio */
+            margin-left: 1rem; /* Add spacing if needed */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+       <div class="item1">Home</div>
+       <div class="item2">About</div>
+       <div class="item3">Services</div>
+       <div class="item4">Contact</div>
+       <img src="data:image/png;base64,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" alt="Github" id="Logo"/>
+     
+    
+    </nav>
+</body>
+</html>
