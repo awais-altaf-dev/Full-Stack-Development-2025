@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition property in CSS</title>
+</head>
+<style>
+    .container {
+        background-color: aqua;
+        width: 50vw;
+        height: 40vh;
+    }
+
+    .box {
+        background-color: red;
+        width: 5vw;
+        height: 4vh;
+
+        /* Transition property specifies which CSS property will be animated */
+        /* You can use 'all' to apply transitions to all properties */
+        transition-property: all;
+
+        /* Transition duration specifies how long the transition will take */
+        transition-duration: 2s;
+
+        /* Transition timing function defines the speed curve of the transition */
+        /* cubic-bezier allows you to create custom easing functions */
+        transition-timing-function: cubic-bezier(0, 0.76, 0.58, 1);
+
+        /* Transition delay specifies the time to wait before starting the transition */
+        transition-delay: 1s;
+    }
+
+    /* This class applies transformations and changes the background color */
+    /* Transformations include translate, scale, rotate, etc. */
+    .Transition {
+        transform: translateX(10vw) translateY(10vh) scale(2); /* Moves and scales the box */
+        background-color: greenyellow; /* Changes the background color */
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="box Transition">Box</div>
+    </div>
+    
+</body>
+</html>
