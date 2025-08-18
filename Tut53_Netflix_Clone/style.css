@@ -1,0 +1,449 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: 'Martel Sans', sans-serif;
+    color: white;
+}
+
+.main {
+    background-image: url(Assets/images/bg.jpg);
+    height: 90vh;
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main .box {
+    height: 90vh;
+    width: 100%;
+    opacity: 0.69;
+    position: absolute;
+    top: 0;
+    background-color: black;
+}
+
+nav {
+    max-width: 80vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+nav img {
+    color: red;
+    width: 130px;
+    position: relative;
+    z-index: 10;
+}
+
+nav button {
+    position: relative;
+    z-index: 10;
+}
+
+.hero {
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+    height: calc(100% - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    color: white;
+    padding: 0 30px;
+    gap: 23px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 1.1;
+}
+
+.hero h2 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.hero h3 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.hero-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.hero-cta > input {
+    height: 60px;
+    width: 450px;
+    color: white;
+    background-color: rgba(23, 23, 23, 0.7);
+    border: 1px solid rgba(246, 238, 238, 0.5);
+    border-radius: 4px;
+    padding: 24px 16px 8px;
+    font-size: 16px;
+}
+
+.hero-cta > button {
+    height: 60px;
+    width: 210px;
+    font-size: 24px;
+    font-weight: 600;
+    background-color: rgb(229, 9, 20);
+    color: white;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.language-btn {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 400;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.sign-in-btn {
+    background-color: rgb(229, 9, 20);
+    color: white;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+}
+
+.separation {
+    height: 7px;
+    background-color: rgb(46, 44, 44);
+    position: relative;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 80vw;
+    margin: auto;
+    padding: 70px 0;
+}
+
+.section-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.section-text h1 {
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.section-text h2 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.secImg {
+    position: relative;
+}
+
+.secImg img {
+    width: 555px;
+    position: relative;
+    z-index: 10;
+}
+
+.secImg video {
+    position: absolute;
+    width: 400px;
+    top: 85px;
+    right: 80px;
+}
+
+.download .secImg img,
+.kids .secImg img {
+    width: 555px;
+}
+
+.everywhere .secImg video {
+    width: 340px;
+    top: 45px;
+    right: 110px;
+}
+
+.faq h2 {
+    text-align: center;
+    font-size: 48px;
+    padding: 34px;
+}
+
+.faq {
+    background: black;
+    color: white;
+    font-size: 26px;
+}
+
+.faqbox:hover {
+    background-color: #414141;
+}
+
+.faqbox svg {
+    height: 38px;
+}
+
+.faqbox {
+    transition: all 0.3s ease-out;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #2d2d2d;
+    padding: 24px;
+    max-width: 70vw;
+    margin: 10px auto;
+    cursor: pointer;
+    align-items: center;
+}
+
+footer {
+    max-width: 70vw;
+    margin: auto;
+    padding: 60px 0;
+}
+
+footer .questions {
+    padding: 34px 0;
+    font-size: 18px;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+.footer-item a {
+    color: rgb(181, 176, 176);
+    font-size: 15px;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1300px) {
+    .section {
+        flex-wrap: wrap;
+        max-width: 90vw;
+    }
+
+    .section-text h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .section-text h2 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .secImg img {
+        width: 305px;
+    }
+
+    .secImg video {
+        width: 215px;
+        top: 45px;
+        right: 45px;
+    }
+
+    .everywhere .secImg video {
+        width: 190px;
+        top: 25px;
+        right: 60px;
+    }
+
+    .download .secImg img,
+    .kids .secImg img {
+        width: 305px;
+    }
+
+    .faq h2 {
+        font-size: 32px;
+    }
+
+    .faqbox {
+        font-size: 18px;
+        max-width: 90vw;
+    }
+
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        height: 70vh;
+    }
+
+    .main .box {
+        height: 70vh;
+    }
+
+    nav {
+        max-width: 90vw;
+        height: 80px;
+    }
+
+    nav img {
+        width: 100px;
+    }
+
+    .hero {
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero h2 {
+        font-size: 18px;
+    }
+
+    .hero h3 {
+        font-size: 16px;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-cta > input {
+        width: 80vw;
+        height: 50px;
+        font-size: 14px;
+    }
+
+    .hero-cta > button {
+        width: 150px;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    .language-btn,
+    .sign-in-btn {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+
+    .section-text h1 {
+        font-size: 24px;
+    }
+
+    .section-text h2 {
+        font-size: 16px;
+    }
+
+    .secImg img {
+        width: 80vw;
+    }
+
+    .secImg video {
+        width: 57vw;
+        top: 12vw;
+        right: 11vw;
+    }
+
+    .everywhere .secImg video {
+        width: 48vw;
+        top: 6vw;
+        right: 16vw;
+    }
+
+    .download .secImg img,
+    .kids .secImg img {
+        width: 80vw;
+    }
+
+    .faq h2 {
+        font-size: 24px;
+        padding: 20px;
+    }
+
+    .faqbox {
+        font-size: 16px;
+        padding: 18px;
+    }
+
+    .faqbox svg {
+        height: 30px;
+    }
+
+    footer {
+        max-width: 90vw;
+        padding: 40px 0;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .footer-item a {
+        font-size: 14px;
+    }
+
+    .questions {
+        font-size: 16px;
+    }
+}
+
+.trending,
+.everywhere {
+    flex-direction: row;
+}
+
+.download,
+.kids {
+    flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 1300px) {
+    .trending,
+    .everywhere,
+    .download,
+    .kids {
+        flex-direction: column-reverse;
+    }
+}
