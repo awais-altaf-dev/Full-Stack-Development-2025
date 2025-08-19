@@ -1,4 +1,6 @@
 console.log("So this is about Conditional by Muhammad Awais Altaf! Happy learning")
+var a = 10;
+var b = 5;
 let age=17;
 let grace=3;
 age+=grace;
@@ -18,3 +20,6 @@ if(age>18){
 else{
     console.log("You are not eligible to vote.");
 }
+//Ternary Operator
+var c=a>b?(a-b):(b-a);
+console.log(c);

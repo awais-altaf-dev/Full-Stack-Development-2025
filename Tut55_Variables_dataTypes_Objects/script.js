@@ -15,7 +15,7 @@ console.log(typeof a, typeof b, typeof c);
 let x = "Muhammad Awais ALtaf";//String
 let y = 45;//Number
 let p = 3.34;//Number
-const h = true;//Boolean
+const h = true;//Boolean  
 let z = undefined;//Undefined
 let i = null;//Object 
 console.log(x, y, p, h, z, i);
@@ -34,3 +34,4 @@ console.log(person);
 person.salary = 250000;
 console.log(person);
 console.log(person.salary);
+
