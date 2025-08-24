@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Attributes & Methods Practice</title>
+    <style>
+        .container {
+            border: 2px solid #333;
+            padding: 10px;
+            margin: 10px;
+        }
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>DOM Manipulation Practice</h1>
+    <div class="container">
+        <!-- Original element -->
+        <div class="box" data-createdby="Muhammad Awais Altaf">Box</div>
+    </div>
+
+    <script>
+        // =========================
+        // ✅ CREATE AND INSERT ELEMENTS
+        // =========================
+
+        // Create a new <div>
+        let newDiv = document.createElement("div");
+
+        // Add HTML inside the div
+        newDiv.innerHTML = "My name is <b>Muhammad Awais Altaf</b>";
+
+        // Set a custom data attribute
+        newDiv.setAttribute("data-createdby", "Muhammad Awais Altaf");
+
+        let container = document.querySelector(".container");
+
+        // Insert in different positions
+        container.append(newDiv); // Add at the end of container
+        container.prepend(newDiv); // Add at the start of container
+        container.before(newDiv); // Add before container
+        container.after(newDiv); // Add after container
+
+        // insertAdjacentElement (more control)
+        container.insertAdjacentElement("beforebegin", newDiv); // Before container
+        container.insertAdjacentElement("afterend", newDiv); // After container
+        container.insertAdjacentHTML("afterend", "<b>Hey I am Muhammad Awais Altaf</b>"); // Insert raw HTML
+
+        // =========================
+        // ✅ INNER CONTENT METHODS
+        // =========================
+
+        console.log(document.querySelector(".box").innerHTML); // 'Box' (with HTML)
+        console.log(document.querySelector(".box").innerText); // 'Box' (text only)
+        console.log(container.textContent); // Text from all child nodes
+        console.log(document.querySelector(".box").outerHTML); // Whole element as string
+
+        // =========================
+        // ✅ TAG & NODE INFO
+        // =========================
+
+        console.log(container.tagName); // 'DIV'
+        console.log(container.nodeName); // 'DIV'
+        console.log(container.nodeType); // 1 (element node)
+
+        // =========================
+        // ✅ ATTRIBUTE METHODS
+        // =========================
+
+        console.log(container.hasAttribute("style")); // false
+        console.log(container.getAttribute("style")); // null
+        container.setAttribute("style", "color: red; background: #eee;"); // Add inline style
+        console.log(container.attributes); // All attributes
+        container.removeAttribute("style"); // Remove attribute
+
+        // =========================
+        // ✅ CLASS MANIPULATION
+        // =========================
+
+        console.log(container.classList); // DOMTokenList
+        console.log(container.className); // "container"
+        container.classList.add("highlight"); // Add class
+        container.classList.remove("highlight"); // Remove class
+        container.classList.toggle("highlight"); // Toggle class
+
+        // =========================
+        // ✅ DATASET (Custom data-* attributes)
+        // =========================
+
+        let box = document.querySelector(".box");
+        console.log(box.dataset); // { createdby: "Muhammad Awais Altaf" }
+        console.log(box.dataset.createdby); // "Muhammad Awais Altaf"
+        box.dataset.role = "student"; // Add new custom data attribute
+
+        // =========================
+        // ✅ STYLE PROPERTIES
+        // =========================
+
+        container.style.border = "3px solid blue"; // Add inline style using JS
+        container.style.padding = "15px";
+
+        // =========================
+        // ✅ VISIBILITY (Hidden property)
+        // =========================
+
+        console.log(container.hidden); // false
+        container.hidden = true; // Hide element
+        container.hidden = false; // Show element
+
+        // =========================
+        // ✅ REMOVE ELEMENT
+        // =========================
+
+        // Remove box element from DOM
+        box.remove();
+
+        // =========================
+        // ✅ DESIGN MODE (Edit whole page content)
+        // =========================
+
+        document.designMode = "on"; // Page is editable
+        document.designMode = "off"; // Back to normal
+
+        // =========================
+        // ✅ EXTRA USEFUL METHODS
+        // =========================
+
+        // Create Text Node and append
+        let textNode = document.createTextNode("This is a text node");
+        container.appendChild(textNode);
+
+        // Clone Node (true = deep clone with children)
+        let clonedDiv = newDiv.cloneNode(true);
+        container.append(clonedDiv);
+
+        // Replace child
+        let newElement = document.createElement("p");
+        newElement.textContent = "This is a new paragraph replacing the cloned div.";
+        container.replaceChild(newElement, clonedDiv);
+
+        // Insert Before
+        container.insertBefore(newElement, container.firstChild);
+
+        // =========================
+        // ✅ GET / SET HTML & TEXT
+        // =========================
+
+        console.log(container.innerHTML); // Get all HTML inside container
+        container.innerHTML = "<h2>Content Replaced</h2>"; // Replace content
+    </script>
+</body>
+</html>
