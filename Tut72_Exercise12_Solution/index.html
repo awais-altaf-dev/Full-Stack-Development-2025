@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Color Boxes</title>
+<style>
+    /* Basic styling for layout and boxes */
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #f4f4f4;
+    }
+    .container {
+        display: flex;
+        gap: 20px; /* Space between boxes */
+    }
+    .box {
+        width: 150px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        border-radius: 8px;
+        color: #fff; /* Default text color */
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+    <div class="box">Box 4</div>
+</div>
+
+<script>
+    // ✅ STEP 1: Select all elements with class "box"
+    // querySelectorAll returns a NodeList of all matching elements
+    const boxes = document.querySelectorAll('.box');
+
+    // ✅ STEP 2: Function to generate a random HEX color
+    // Math.random() → gives a random number between 0 and 1
+    // Multiply by 16777215 (decimal for FFFFFF in hex) → full color range
+    // Math.floor() → remove decimal part
+    // toString(16) → convert number to base 16 (hexadecimal)
+    function getRandomColor() {
+        return "#" + Math.floor(Math.random() * 16777215).toString(16);
+    }
+
+    // ✅ STEP 3: Loop through each box and apply random colors
+    boxes.forEach(box => {
+        // Generate random text color
+        const randomColor = getRandomColor();
+
+        // Generate random background color
+        const randomBackgroundColor = getRandomColor();
+
+        // ✅ STEP 4: Apply the colors using style property
+        box.style.color = randomColor; // Text color
+        box.style.backgroundColor = randomBackgroundColor; // Background color
+
+        // ✅ STEP 5: Show the text color code inside the box
+        // (You can also show both colors if you want)
+        box.textContent = randomColor;
+    });
+</script>
+</body>
+</html>
